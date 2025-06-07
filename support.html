@@ -1,0 +1,383 @@
+<!-- Sermons Section -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel House to House - AEBR Ministry</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,rw,fr',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<body>
+    <!-- Dark Mode & Language Toggle -->
+    <div class="theme-switch-wrapper">
+        <button id="languageToggle" class="btn btn-outline">
+            <span class="english">EN</span>/<span class="kinyarwanda">KIN</span>
+        </button>
+        <label class="theme-switch">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+        <span id="toggle-icon"><i class="fas fa-sun"></i></span>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Gospel<span>House</span>.</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item" data-en="Home" data-kin="Ahabanza">Home</a></li>
+                    <li><a href="paster.html" class="nav-item" data-en="Pastor" data-kin="Umupasitoro">Pastor</a></li>
+                    <li><a href="mission.html" class="nav-item" data-en="Mission" data-kin="Intumwa">Mission</a></li>
+                    <li><a href="Sermons.html" class="nav-item" data-en="Sermons" data-kin="Ibyahishuwe">Sermons</a></li>
+                    <li><a href="prayer.html" class="nav-item" data-en="Prayer" data-kin="Gusenga">Prayer</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-gradient nav-item" data-en="Contact" data-kin="Twandikire">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Support Our Mission</h1>
+            <p>Join us in spreading the Gospel from house to house and reaching souls across nations through the power of Christ's love</p>
+        </div>
+    </section>
+
+    <!-- Bible Verse Section -->
+    <section class="verse-section">
+        <div class="verse-content">
+            <div class="verse-text">
+                "Day after day, in the temple courts and from house to house, they never stopped teaching and proclaiming the good news that Jesus is the Messiah."
+            </div>
+            <div class="verse-reference">Acts 5:42</div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section">
+        <div class="section-container">
+            <h2>Our Ministry Impact</h2>
+            <p class="mission-description">
+                Gospel House to House is a bilingual digital ministry launched by passionate pastors under the AEBR church, transforming lives through house-to-house evangelism and digital fellowship.
+            </p>
+            
+            <div class="mission-grid">
+                <div class="mission-item">
+                    <h3><span>🏠</span> House-to-House Evangelism</h3>
+                    <p>Visiting homes to personally share the love and truth of Jesus Christ with families and individuals in their most comfortable spaces.</p>
+                </div>
+                
+                <div class="mission-item">
+                    <h3><span>📖</span> Biblical Teaching</h3>
+                    <p>Providing spiritually nourishing teachings, devotionals, and Biblical wisdom through our online platform and ministry resources.</p>
+                </div>
+                
+                <div class="mission-item">
+                    <h3><span>💻</span> Digital Fellowship</h3>
+                    <p>Building a faith-filled community that prays, learns, and grows together virtually, connecting believers across distances.</p>
+                </div>
+                
+                <div class="mission-item">
+                    <h3><span>🌍</span> Monthly Vision & Evangelism</h3>
+                    <p>Conducting monthly meetings, coordinated evangelism efforts, fellowship support, and prayers to reach beyond our nation's borders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Section -->
+    <section class="donation-section">
+        <div class="section-container">
+            <h2>Make Your Donation</h2>
+            <p class="donation-description">
+                Your generous support empowers us to reach more homes and hearts with the life-changing Gospel message of Jesus Christ.
+            </p>
+
+            <div class="amount-selection">
+                <div class="amount-btn" onclick="selectAmount(25)">$25</div>
+                <div class="amount-btn" onclick="selectAmount(50)">$50</div>
+                <div class="amount-btn" onclick="selectAmount(100)">$100</div>
+                <div class="amount-btn" onclick="selectAmount(250)">$250</div>
+                <div class="amount-btn" onclick="selectAmount(500)">$500</div>
+                <div class="amount-btn" onclick="selectAmount(1000)">$1000</div>
+            </div>
+
+            <div class="custom-amount">
+                <input type="number" id="customAmount" placeholder="Enter custom amount ($)" min="1">
+            </div>
+
+            <div class="payment-methods">
+                <div class="payment-tabs">
+                    <button class="payment-tab active" onclick="switchTab('card')">💳 Credit/Debit Card</button>
+                    <button class="payment-tab" onclick="switchTab('momo')">📱 MTN Mobile Money</button>
+                </div>
+
+                <div id="card-form" class="payment-form active">
+                    <div class="form-group">
+                        <label>Cardholder Name</label>
+                        <input type="text" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Card Number</label>
+                        <input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Expiry Date</label>
+                            <input type="text" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label>CVV</label>
+                            <input type="text" placeholder="123" maxlength="4" required>
+                        </div>
+                    </div>
+
+                    <div class="security-note">
+                        🔒 Your payment information is encrypted and secure with industry-standard protection
+                    </div>
+                </div>
+
+                <div id="momo-form" class="payment-form">
+                    <div class="momo-info">
+                        <strong>📱 MTN Mobile Money Payment</strong>
+                        You will receive an SMS prompt on your mobile device to authorize the payment from your MTN Mobile Money account. Please ensure you have sufficient balance.
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+233 XX XXX XXXX" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Network Provider</label>
+                        <select required>
+                            <option value="">Select Network Provider</option>
+                            <option value="mtn">MTN Rwanda</option>
+                            <option value="vodafone">Vodafone </option>
+                            <option value="airteltigo">AirtelTigo Ghana</option>
+                        </select>
+                    </div>
+
+                    <div class="security-note">
+                        📱 You'll receive an SMS prompt to complete the payment securely through your mobile network
+                    </div>
+                </div>
+            </div>
+
+            <button class="donate-btn" onclick="processDonation()">
+                💝 Donate Now - Spread the Gospel
+            </button>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="impact-section">
+        <div class="section-container">
+            <h2>Your Impact in Numbers</h2>
+            <p class="impact-description">See how your generous donations are transforming lives and building God's kingdom</p>
+            
+            <div class="impact-grid">
+                <div class="impact-item">
+                    <span class="impact-number">50+</span>
+                    <div class="impact-text">Homes Visited</div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">40+</span>
+                    <div class="impact-text">Souls Reached</div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">34+</span>
+                    <div class="impact-text">Lives Transformed</div>
+                </div>
+                <div class="impact-item">
+                    <span class="impact-number">5</span>
+                    <div class="impact-text">Monthly Meetings</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Theme Management
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            document.getElementById('theme-icon').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+            
+            // Store theme preference
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme
+        function loadTheme() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            document.getElementById('theme-icon').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+        }
+
+        // Donation functionality
+        let selectedAmount = 0;
+        let currentPaymentMethod = 'card';
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            
+            // Update button states
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Clear custom amount
+            document.getElementById('customAmount').value = '';
+        }
+
+        function switchTab(method) {
+            currentPaymentMethod = method;
+            
+            // Update tab states
+            document.querySelectorAll('.payment-tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Show/hide forms
+            document.querySelectorAll('.payment-form').forEach(form => {
+                form.classList.remove('active');
+            });
+            document.getElementById(method + '-form').classList.add('active');
+        }
+
+        function processDonation() {
+            // Get the donation amount
+            const customAmount = document.getElementById('customAmount').value;
+            const finalAmount = customAmount || selectedAmount;
+            
+            if (!finalAmount || finalAmount <= 0) {
+                alert('Please select or enter a donation amount.');
+                return;
+            }
+            
+            // Validate form fields based on payment method
+            let isValid = true;
+            const activeForm = document.querySelector('.payment-form.active');
+            const requiredFields = activeForm.querySelectorAll('input[required], select[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#e53e3e';
+                } else {
+                    field.style.borderColor = 'var(--border-color)';
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // Simulate payment processing
+            const btn = event.target;
+            const originalText = btn.textContent;
+            
+            btn.textContent = 'Processing...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                if (currentPaymentMethod === 'momo') {
+                    alert(`🙏 Thank you for your heart of giving! A Mobile Money prompt has been sent to complete your $${finalAmount} donation. Please check your phone and follow the instructions. God bless you!`);
+                } else {
+                    alert(`🙏 Thank you for your generous donation of $${finalAmount}! Your support helps us reach more homes with the Gospel message. May God multiply your blessing!`);
+                }
+                
+                btn.textContent = originalText;
+                btn.disabled = false;
+                
+                // Reset form
+                resetForm();
+            }, 2000);
+        }
+
+        function resetForm() {
+            // Reset amount selection
+            selectedAmount = 0;
+            document.querySelectorAll('.amount-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('customAmount').value = '';
+            
+            // Reset all form fields
+            document.querySelectorAll('input, select').forEach(field => {
+                field.value = '';
+                field.style.borderColor = 'var(--border-color)';
+            });
+        }
+
+        // Format card number input
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load theme on page load
+            loadTheme();
+            
+            const cardInput = document.querySelector('input[placeholder="1234 5678 9012 3456"]');
+            if (cardInput) {
+                cardInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\s/g, '');
+                    value = value.replace(/(.{4})/g, '$1 ').trim();
+                    e.target.value = value;
+                });
+            }
+            
+            // Format expiry date
+            const expiryInput = document.querySelector('input[placeholder="MM/YY"]');
+            if (expiryInput) {
+                expiryInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    if (value.length >= 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                    e.target.value = value;
+                });
+            }
+
+            // Custom amount input listener
+            document.getElementById('customAmount').addEventListener('input', function() {
+                if (this.value) {
+                    // Clear selected amount buttons
+                    document.querySelectorAll('.amount-btn').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    selectedAmount = 0;
+                }
+            });
+        });
+    </script>
+</body>
+<script>rc="script.js"</script>
+</body>
+</html>

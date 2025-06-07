@@ -1,0 +1,306 @@
+<!-- Sermons Section -->
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel House to House - AEBR Ministry</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="google_translate_element"></div>
+
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'en,rw,fr',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+  }
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<body>
+    <!-- Dark Mode & Language Toggle -->
+    <div class="theme-switch-wrapper">
+        <button id="languageToggle" class="btn btn-outline">
+            <span class="english">EN</span>/<span class="kinyarwanda">KIN</span>
+        </button>
+        <label class="theme-switch">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round"></div>
+        </label>
+        <span id="toggle-icon"><i class="fas fa-sun"></i></span>
+    </div>
+
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo">Gospel<span>House</span>.</a>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-item" data-en="Home" data-kin="Ahabanza">Home</a></li>
+                    <li><a href="paster.html" class="nav-item" data-en="Pastor" data-kin="Umupasitoro">Pastor</a></li>
+                    <li><a href="mission.html" class="nav-item" data-en="Mission" data-kin="Intumwa">Mission</a></li>
+                    <li><a href="Sermons.html" class="nav-item" data-en="Sermons" data-kin="Ibyahishuwe">Sermons</a></li>
+                    <li><a href="prayer.html" class="nav-item" data-en="Prayer" data-kin="Gusenga">Prayer</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-gradient nav-item" data-en="Contact" data-kin="Twandikire">Contact</a>
+            </nav>
+        </div>
+    </header>
+<body>
+    <!-- This is your contact section - you can copy this entire section into your website -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions or need assistance? We're here to help! Send us a message or give us a call.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left Side - Contact Form -->
+                <div class="form-container">
+                    <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="What's this about?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Tell us how we can help you..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            Send Message
+                        </button>
+
+                        <div id="statusMessage" class="status-message"></div>
+                    </form>
+                </div>
+
+                <!-- Right Side - Info & Suggestions -->
+                <div class="info-container">
+                    <!-- Contact Information -->
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+                        <div class="contact-info">
+                            <div class="phone-number">📱 +2507835097</div>
+                            <p>✉️ info@gospelhousetohouse.org</p>
+                            <p>📍NYABIHU, Rwanda</p>
+                            
+                            <div class="business-hours">
+                                <strong>Business Hours:</strong><br>
+                                Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                Saturday: 9:00 AM - 4:00 PM<br>
+                                Sunday: Closed
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Popular Message Suggestions -->
+                    <div class="info-card suggestions">
+                        <h3>Popular Inquiries</h3>
+                        <p>Click on any topic below to quickly fill your message:</p>
+                        <div class="suggestion-tags">
+                            <button class="suggestion-tag" onclick="fillMessage('pricing')">Pricing Information</button>
+                            <button class="suggestion-tag" onclick="fillMessage('support')">Technical Support</button>
+                            <button class="suggestion-tag" onclick="fillMessage('partnership')">Partnership</button>
+                            <button class="suggestion-tag" onclick="fillMessage('general')">General Question</button>
+                            <button class="suggestion-tag" onclick="fillMessage('feedback')">Feedback</button>
+                            <button class="suggestion-tag" onclick="fillMessage('demo')">Request Demo</button>
+                        </div>
+                    </div>
+
+                    <!-- Advertisement Space -->
+                    <div class="info-card">
+                        <div class="ad-space">
+                            <div class="ad-placeholder">🖼️ Advertisement Space</div>
+                            <p>most well come fo up coming event </p>
+                            <!-- Uncomment and replace with your actual ad image -->
+                             <img src="image/village work.png" alt="Advertisement" class="ad-image">
+                            <!-- <img src="your-ad-image.jpg" alt="Advertisement" class="ad-image"> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Pre-written message templates
+        const messageTemplates = {
+            pricing: "Hi! I'm interested in learning more about your pricing and available packages. Could you please provide me with detailed information?",
+            support: "Hello, I'm experiencing some technical issues and would appreciate your assistance. Here's what's happening: ",
+            partnership: "Hi there! I'm interested in exploring potential partnership opportunities with your company. I'd love to discuss how we might work together.",
+            general: "Hello! I have a general question about your services. Could you please help me understand ",
+            feedback: "Hi! I wanted to share some feedback about my experience with your service. ",
+            demo: "Hello! I'm interested in seeing a demonstration of your product/service. Could we schedule a demo session?"
+        };
+
+        // Fill message function
+        function fillMessage(type) {
+            const messageField = document.getElementById('message');
+            const subjectField = document.getElementById('subject');
+            
+            messageField.value = messageTemplates[type];
+            
+            // Also update subject based on type
+            const subjects = {
+                pricing: "Pricing Inquiry",
+                support: "Technical Support Request",
+                partnership: "Partnership Opportunity",
+                general: "General Question",
+                feedback: "Customer Feedback",
+                demo: "Demo Request"
+            };
+            
+            subjectField.value = subjects[type];
+            
+            // Focus on message field for user to continue typing
+            messageField.focus();
+            messageField.setSelectionRange(messageField.value.length, messageField.value.length);
+        }
+
+        // Form handling
+        const form = document.getElementById('contactForm');
+        const submitBtn = document.getElementById('submitBtn');
+        const statusMessage = document.getElementById('statusMessage');
+
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                showMessage('Please fill in all required fields.', 'error');
+                return false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                showMessage('Please enter a valid email address.', 'error');
+                return false;
+            }
+
+            return true;
+        }
+
+        function showMessage(message, type) {
+            statusMessage.textContent = message;
+            statusMessage.className = `status-message ${type}`;
+            statusMessage.style.display = 'block';
+            
+            setTimeout(() => {
+                statusMessage.style.display = 'none';
+            }, 5000);
+        }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            if (!validateForm()) {
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+
+            try {
+                const formData = new FormData(form);
+                
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    showMessage('Thank you! Your message has been sent successfully.', 'success');
+                    form.reset();
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                showMessage('Sorry, there was an error sending your message. Please try again.', 'error');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Send Message';
+            }
+        });
+    </script>
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Ministry Info -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Gospel House to House" data-kin="Ijana ry'Imana mu rugo">Gospel House to House</h3>
+                <p class="bilingual" data-en="A ministry of AEBR" data-kin="Umurimo wa AEBR">A ministry of AEBR</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i>📍NYABIHU Kigali, Rwanda</p>
+                    <p><i class="fas fa-phone"></i> +250 7835 96097</p>
+                    <p><i class="fas fa-envelope"></i> info@gospelhousetohouse.org</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Quick Links" data-kin="Amahuza yihuse">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" class="bilingual" data-en="Home" data-kin="Ahabanza">Home</a></li>
+                    <li><a href="paster.html" class="bilingual" data-en="Our Pastor" data-kin="Umupasitoro">Our Pastor</a></li>
+                    <li><a href="Sermons.html" class="bilingual" data-en="Sermons" data-kin="Ibyahishuwe">Sermons</a></li>
+                    <li><a href="prayer.html" class="bilingual" data-en="Prayer" data-kin="Gusenga">Prayer</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Connect With Us" data-kin="Twihangane">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+                <!-- Donation Button -->
+                <a href="#" class="btn btn-donate bilingual" data-en="Support the Ministry" data-kin="Gufasha umurimo">
+                    <i class="fas fa-hand-holding-heart"></i> Support
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <div class="footer-bottom">
+            <p class="bilingual" data-en="© 2024 Gospel House to House. All rights reserved." data-kin="© 2024 Ijana ry'Imana mu rugo. Amategeko yose yubahirizwa.">
+                © 2025 Gospel House to House. All rights reserved.
+            </p>
+            <p class="bilingual" data-en="Powered by Faith" data-kin="Bitewe n'ukwizera">Powered by Faith</p>
+        </div>
+    </div>
+</footer>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

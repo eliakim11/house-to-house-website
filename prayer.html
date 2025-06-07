@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Requests - Gospel House to House</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="theme-switch-wrapper">
+    <button id="languageToggle" class="btn btn-outline">
+        <span class="english">EN</span>/<span class="kinyarwanda">KIN</span>
+    </button>
+    <label class="theme-switch">
+        <input type="checkbox" id="checkbox">
+        <div class="slider round"></div>
+    </label>
+    <span id="toggle-icon"><i class="fas fa-sun"></i></span>
+</div>
+
+<!-- Header/Navbar -->
+<header class="header">
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="logo">Gospel<span>House</span>.</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-item" data-en="Home" data-kin="Ahabanza">Home</a></li>
+                <li><a href="paster.html" class="nav-item" data-en="Pastor" data-kin="Umupasitoro">Pastor</a></li>
+                <li><a href="mission.html" class="nav-item" data-en="Mission" data-kin="Intumwa">Mission</a></li>
+                <li><a href="Sermons.html" class="nav-item" data-en="Sermons" data-kin="Ibyahishuwe">Sermons</a></li>
+                <li><a href="prayer.html" class="nav-item" data-en="Prayer" data-kin="Gusenga">Prayer</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-gradient nav-item" data-en="Contact" data-kin="Twandikire">Contact</a>
+        </nav>
+    </div>
+</header>
+<body>
+    <!-- Your Existing Header -->
+
+    <main class="container">
+        <!-- Prayer Hero Section -->
+        <section class="prayer-hero">
+            <div class="prayer-hero-content">
+                <h1 class="bilingual" data-en="We're Praying For You" data-kin="Turabasengera">We're Praying For You</h1>
+                <p class="bilingual" data-en="Share your prayer request and our team will intercede for you" 
+                   data-kin="Saba icyo ushaka kandi itsinda ryacu rizasenga kuri wowe">
+                   Share your prayer request and our team will intercede for you
+                </p>
+            </div>
+        </section>
+
+        <!-- Prayer Form Section -->
+        <section class="prayer-form-section">
+            <div class="prayer-form-container">
+                <h2 class="form-title bilingual" data-en="Submit Your Request" data-kin="Tanga icyo usaba">Submit Your Request</h2>
+                
+                <form id="prayerForm" class="prayer-form">
+                    <div class="prayer-type-selector">
+                        <button type="button" class="prayer-type-btn active" data-type="personal">
+                            <i class="fas fa-user"></i>
+                            <span class="bilingual" data-en="Personal" data-kin="Ubwite">Personal</span>
+                        </button>
+                        <button type="button" class="prayer-type-btn" data-type="family">
+                            <i class="fas fa-home"></i>
+                            <span class="bilingual" data-en="Family" data-kin="Umuryango">Family</span>
+                        </button>
+                        <button type="button" class="prayer-type-btn" data-type="community">
+                            <i class="fas fa-users"></i>
+                            <span class="bilingual" data-en="Community" data-kin="Umuryango">Community</span>
+                        </button>
+                    </div>
+                    
+                    <input type="hidden" id="prayerType" name="prayerType" value="personal">
+                    
+                    <div class="form-group">
+                        <label for="name" class="bilingual" data-en="Your Name" data-kin="Izina ryawe">Your Name</label>
+                        <input type="text" id="name" name="name" class="bilingual-placeholder" 
+                               data-en="Enter your name" data-kin="Andika izina ryawe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contact" class="bilingual" data-en="Contact (Optional)" data-kin="Uburyo bwo kugenderaho (Ntibyakenerwa)">Contact (Optional)</label>
+                        <input type="text" id="contact" name="contact" class="bilingual-placeholder" 
+                               data-en="Email or phone" data-kin="Imeyili cyangwa telefone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="request" class="bilingual" data-en="Prayer Request" data-kin="Gusaba gusengwa">Prayer Request</label>
+                        <textarea id="request" name="request" class="bilingual-placeholder" 
+                                  data-en="Please share your prayer need..." data-kin="Nyamuneka sabiza icyo ushaka..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="privacy" class="checkbox-label">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <span class="bilingual" data-en="I agree to have this request shared with our prayer team" 
+                                  data-kin="Nemera ko icyi gisabwa kizasangirwa n'itsinda ry'abasenga">
+                                  I agree to have this request shared with our prayer team
+                            </span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="form-submit-btn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="bilingual" data-en="Submit Request" data-kin="Ohereza">Submit Request</span>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="prayer-promises">
+                <div class="promise-card">
+                    <h3 class="bilingual" data-en="God Hears You" data-kin="Imana yumva">God Hears You</h3>
+                    <p class="verse bilingual" data-en="&quot;This is the confidence we have in approaching God: that if we ask anything according to his will, he hears us.&quot;" 
+                       data-kin="&quot;Iki ni icyizere dufite mugihe twiyegereza Imana: ni uko iyo dukeneye ikintu runaka bikwiye ishaka, itwumva.&quot;">
+                       "This is the confidence we have in approaching God: that if we ask anything according to his will, he hears us."
+                    </p>
+                    <p class="reference bilingual" data-en="1 John 5:14" data-kin="1 Yohana 5:14">1 John 5:14</p>
+                </div>
+                
+                <div class="promise-card">
+                    <h3 class="bilingual" data-en="Pray Without Ceasing" data-kin="Musabe mutazima">Pray Without Ceasing</h3>
+                    <p class="verse bilingual" data-en="&quot;Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus.&quot;" 
+                       data-kin="&quot;Nimwishime buri gihe, musabe mutazima, mushimire mu bihe byose; kuko ibi ni byo Imana ishaka kuri mwe muri Kristo Yesu.&quot;">
+                       "Rejoice always, pray continually, give thanks in all circumstances; for this is God's will for you in Christ Jesus."
+                    </p>
+                    <p class="reference bilingual" data-en="1 Thessalonians 5:16-18" data-kin="1 Abatesalonika 5:16-18">1 Thessalonians 5:16-18</p>
+                </div>
+                
+                <div class="promise-card">
+                    <h3 class="bilingual" data-en="Prayer Changes Things" data-kin="Gusenga bihindura">Prayer Changes Things</h3>
+                    <p class="verse bilingual" data-en="&quot;Therefore I tell you, whatever you ask for in prayer, believe that you have received it, and it will be yours.&quot;" 
+                       data-kin="&quot;Nuko mbabwira ngo, icyo aricyo cyose musaba mugusenga, nimwemere ko mwacyubonye, kizaba icyanyu.&quot;">
+                       "Therefore I tell you, whatever you ask for in prayer, believe that you have received it, and it will be yours."
+                    </p>
+                    <p class="reference bilingual" data-en="Mark 11:24" data-kin="Mariko 11:24">Mark 11:24</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Recent Prayers Section (Optional) -->
+        <section class="recent-prayers">
+            <h2 class="bilingual" data-en="Recent Prayer Requests" data-kin="Gusaba gusengwa gushize">Recent Prayer Requests</h2>
+            <div class="prayer-grid">
+                <!-- These would be dynamically loaded from your database -->
+                <div class="prayer-item">
+                    <span class="type bilingual" data-en="Personal" data-kin="Ubwite">Personal</span>
+                    <p class="content bilingual" data-en="Pray for healing from chronic back pain" data-kin="Nsabwa gusenga kubura indwara y'umugongo">Pray for healing from chronic back pain</p>
+                    <div class="meta">
+                        <span class="date">June 15, 2025</span>
+                        <span class="location bilingual" data-en="Kigali" data-kin="Kigali">Kigali</span>
+                    </div>
+                </div>
+                
+                <div class="prayer-item">
+                    <span class="type bilingual" data-en="Family" data-kin="Umuryango">Family</span>
+                    <p class="content bilingual" data-en="Pray for my daughter's university admission" data-kin="Nsabwa gusenga kwinjira kwa muhungu wanjye mu kaminuza">Pray for my daughter's university admission</p>
+                    <div class="meta">
+                        <span class="date">June 12, 2025 </span>
+                        <span class="location bilingual" data-en="Musanze" data-kin="Musanze">Musanze</span>
+                    </div>
+                </div>
+                
+                <!-- Add more prayer items as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Your Existing Footer -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Prayer Type Selection
+            const prayerTypeBtns = document.querySelectorAll('.prayer-type-btn');
+            const prayerTypeInput = document.getElementById('prayerType');
+            
+            prayerTypeBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    prayerTypeBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    prayerTypeInput.value = this.dataset.type;
+                });
+            });
+            
+            // 2. Form Submission
+            const prayerForm = document.getElementById('prayerForm');
+            
+            prayerForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Form validation
+                const name = this.elements.name.value.trim();
+                const request = this.elements.request.value.trim();
+                
+                if (!name || !request) {
+                    alert(document.documentElement.getAttribute('data-lang') === 'kin' 
+                        ? "Nyamuneka uzuzze ibisabwa byose" 
+                        : "Please fill in all required fields");
+                    return;
+                }
+                
+                // Prepare form data
+                const formData = new FormData(this);
+                
+                // Simulate submission (replace with actual fetch)
+                console.log('Submitting prayer request:', {
+                    type: formData.get('prayerType'),
+                    name: formData.get('name'),
+                    contact: formData.get('contact'),
+                    request: formData.get('request')
+                });
+                
+                // Show success message
+                alert(document.documentElement.getAttribute('data-lang') === 'kin' 
+                    ? "Icyo wasabye cyo gusengwa cyatanzwe neza. Murakoze!" 
+                    : "Your prayer request has been submitted. Thank you!");
+                
+                // Reset form
+                this.reset();
+                prayerTypeBtns[0].click();
+                
+                // In a real app, you would:
+                // fetch('/api/prayer-requests', {
+                //     method: 'POST',
+                //     body: formData
+                // })
+                // .then(response => response.json())
+                // .then(data => {
+                //     // Handle success
+                //     addNewPrayerToGrid(data);
+                // });
+            });
+            
+            // 3. Language Toggle for Placeholders
+            function updatePlaceholders() {
+                const isKin = document.documentElement.getAttribute('data-lang') === 'kin';
+                document.querySelectorAll('.bilingual-placeholder').forEach(el => {
+                    el.placeholder = el.getAttribute(isKin ? 'data-kin' : 'data-en');
+                });
+            }
+            
+            // Call initially and whenever language changes
+            updatePlaceholders();
+            
+            // 4. Load Recent Prayers (simulated)
+            function loadRecentPrayers() {
+                // In a real app, you would:
+                // fetch('/api/recent-prayers')
+                // .then(response => response.json())
+                // .then(data => populatePrayerGrid(data));
+                
+                console.log('Loading recent prayer requests...');
+            }
+            
+            loadRecentPrayers();
+        });
+    </script>
+    <!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Ministry Info -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Gospel House to House" data-kin="Ijana ry'Imana mu rugo">Gospel House to House</h3>
+                <p class="bilingual" data-en="A ministry of AEBR" data-kin="Umurimo wa AEBR">A ministry of AEBR</p>
+                <div class="footer-contact">
+                    <p><i class="fas fa-map-marker-alt"></i> 📍NYABIHU.Kigali, Rwanda</p>
+                    <p><i class="fas fa-phone"></i> +250 783596097</p>
+                    <p><i class="fas fa-envelope"></i> Info@gospelhousetohouse.org</p>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Quick Links" data-kin="Amahuza yihuse">Quick Links</h3>
+                <ul>
+                    <li><a href="index.html" class="bilingual" data-en="Home" data-kin="Ahabanza">Home</a></li>
+                    <li><a href="paster.html" class="bilingual" data-en="Our Pastor" data-kin="Umupasitoro">Our Pastor</a></li>
+                    <li><a href="Sermons.html" class="bilingual" data-en="Sermons" data-kin="Ibyahishuwe">Sermons</a></li>
+                    <li><a href="prayer.html" class="bilingual" data-en="Prayer" data-kin="Gusenga">Prayer</a></li>
+                </ul>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-col">
+                <h3 class="bilingual" data-en="Connect With Us" data-kin="Twihangane">Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                
+                <!-- Donation Button -->
+                <a href="#" class="btn btn-donate bilingual" data-en="Support the Ministry" data-kin="Gufasha umurimo">
+                    <i class="fas fa-hand-holding-heart"></i> Support
+                </a>
+            </div>
+        </div>
+
+        <!-- Copyright & Credits -->
+        <div class="footer-bottom">
+            <p class="bilingual" data-en="© 2024 Gospel House to House. All rights reserved." data-kin="© 2024 Ijana ry'Imana mu rugo. Amategeko yose yubahirizwa.">
+                © 2025 Gospel House to House. All rights reserved.
+            </p>
+            <p class="bilingual" data-en="Powered by Faith" data-kin="Bitewe n'ukwizera">Powered by Faith</p>
+        </div>
+    </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
