@@ -2412,3 +2412,64 @@ body {
                 grid-template-columns: 1fr;
             }
         }
+      /* coment of watsapp icon css*/
+      
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    padding: 10px;
+    z-index: 9999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .whatsapp-float:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.7);
+  }
+
+  .whatsapp-icon {
+    width: 48px;
+    height: 48px;
+    fill: #25D366; /* WhatsApp green */
+    transition: fill 0.3s ease;
+  }
+
+  .whatsapp-float:hover .whatsapp-icon {
+    fill: #128C7E; /* darker green on hover */
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .whatsapp-float {
+      bottom: 20px;
+      right: 20px;
+      padding: 12px;
+    }
+
+    .whatsapp-icon {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .whatsapp-float {
+      bottom: 15px;
+      right: 15px;
+      padding: 14px;
+    }
+
+    .whatsapp-icon {
+      width: 60px;
+      height: 60px;
+    }
+  }
