@@ -2419,7 +2419,7 @@ body {
     position: fixed;
     bottom: 25px;
     right: 25px;
-    background: white;
+    background: rgb(10, 10, 10);
     border-radius: 50%;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     padding: 10px;
